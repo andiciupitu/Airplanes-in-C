@@ -1,0 +1,47 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                AVIOANE - Tema 2 PCLP
+
+Ciupitu Andi Mihai 
+321CD
+
+1)SolveTask1 :
+    Am parcurs fiecare avion printr o structura repetitiva, cu memcpy am salvat
+datele in variabile. Variabila 'len' ajuta la parcurgerea vectorului, dupa ce 
+extrag cu memcpy informatia, len se va mari cu sizeof(tipul variabilei).
+    Afisarea este facuta dupa fiecare avion prelucrat conform fisierelor de 
+reference.
+
+2)SolveTask2 :
+    Prelucrarea datelor este asemanatoare Task-ului 1, matricea a fost creata
+cu ajutorul functiei EscapeTheMatrix(), care primeste urmatorii parametri cu 
+semnificatia specifica:
+    char **mat = matricea avioanelor 
+    int i = coordonata x a varfului avionului
+    int j = coordonata y a varfului avionului
+    unsigned char dir = directia catre care se indreapta avionului
+    char type = tipul avionului care trebuie creeat in matrice
+
+    Continutul functiei consta intr un switch legat de tipul avionului si unul
+legat de directia de deplasare. Pentru fiecare caz particular am adaugat in 
+matrice caractere '*' pentru a forma avionul.
+
+3)SolveTask3 :
+    Pentru a sorta vectorul void *info, m am folosit de qSort pentru care am 
+implementat functia compare(const *void a, const void* b). Mi am creat 2
+variabile char unde am salvat byte ul pentru tipul avionului. Daca tipurile erau
+egale, comparam litera cu litera din codul avionului. Iar in ultimul caz 
+(codurile sunt egale), comparam viteza celor 2 avioane.
+
+4)SolveTask4 :
+    Pentru SolveTask4, am adaugat in matrice obstacolele, iar fiecare avion
+are in functie de tip si directie, un anumit 'drum' prin care o sa treaca pana
+la iesire. Daca in acel drum care este reprezentat printr o matrice specifica 
+se gaseste vreun caracter '@' rezulta ca avionul spre iesire va lovi acel 
+obstacol si nu l puteam lua in considerare in aflarea numarului de avioane
+care reusesc sa se deplaseze pana la iesirea de pe harta in siguranta.
+
+Cam atât :-)
+
+Ciupitu Andi Mihai
+321CD
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
